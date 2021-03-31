@@ -1,0 +1,34 @@
+<div class="chosen-pizza">
+    <div class="pizza-info">
+        <% if(size == 'big_size') { %>
+        <div class="chosen-pizza-name"><%= pizza.title %> (Велика) </div>
+        <% } else {%>
+        <div class="chosen-pizza-name"><%= pizza.title %> (Мала) </div>
+        <% } %>
+        <div class="icons">
+            <img src="<%= pizza.icon_size %>">
+            <span class="badge-size"><%= pizza[size].size %></span>
+            <img src="<%= pizza.icon_weight %>">
+            <span class="badge-weight"><%= pizza[size].weight %></span>
+        </div>
+        <div class="buttons-toolbar">
+            <span class="badge-price-of-pizza"><%= pizza[size].price*quantity %><%= pizza[size].price_currency %></span>
+            <span class="buttons-labels">
+                <span class="btn btn-danger btn-sm minus-button" id="1">
+                            <span class="glyphicon glyphicon-minus"></span>
+                        </span>
+                <span class="badge-number-of-pizzas" id="2"><%= quantity %></span>
+                <span class="btn btn-success btn-sm plus-button"id="3">
+                            <span class="glyphicon glyphicon-plus"></span>
+                        </span>
+                <span class="btn btn-default btn-sm remove-button" id="4">
+                            <span class="glyphicon glyphicon-remove"></span>
+                        </span>
+            </span>
+        </div>
+        <div class="pizza-image">
+            <img src="<%= pizza.icon_trans %>">
+        </div>
+    </div>
+
+</div>
